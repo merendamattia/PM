@@ -3,7 +3,7 @@ Corso _"Programmazione Mobile"_ presso l'Università degli Studi di Parma (6 CFU
 ```
 Guida directory:
 .
-├── lezioni
+├── lezioni: appunti presi a lezione
 └── progetti
     ├── android
     └── ios
