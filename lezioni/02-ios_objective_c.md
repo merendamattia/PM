@@ -1,4 +1,4 @@
-# iOS - Apple 
+# iOS - Objective-C 
 
 1. [Objective-C](#objective-c)
 2. [Object-Oriented Programming](#object-oriented-programming)
