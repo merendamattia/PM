@@ -9,4 +9,4 @@ Guida directory:
     └── ios
 ```
 
-> Appunti teoria: _[merendamattia.com/uni](https://www.merendamattia.com/uni.html)_
+> Altri appunti: _[merendamattia.com/uni](https://www.merendamattia.com/uni.html)_
