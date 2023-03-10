@@ -198,3 +198,5 @@ Possono essere:
 La buona pratica in OOP è quella di contrassegnare tutte le variabili di istanza come private e utilizzare metodi getter e setter per accedervi.
 
 [_Torna all'indice_](#ios%20-%20objective-c)
+
+cazzataprova
