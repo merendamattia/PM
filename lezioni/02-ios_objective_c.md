@@ -108,6 +108,8 @@ Definiamo una nuova classe chiamata `MDPoi` (Poi: point of interest), usata per 
 @end
 ```
 
+[_Torna all'indice_](#ios%20-%20objective-c)
+
 ### Implementazioni classi
 Ora, implementiamo la classe `MDPoi` definita nel file di interfaccia `MDPoi.h`.
 
