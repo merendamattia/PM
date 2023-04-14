@@ -14,6 +14,7 @@
 		CAF765AB29E9491800AC7325 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CAF765AA29E9491800AC7325 /* Assets.xcassets */; };
 		CAF765AE29E9491800AC7325 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAF765AC29E9491800AC7325 /* LaunchScreen.storyboard */; };
 		CAF765B129E9491800AC7325 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CAF765B029E9491800AC7325 /* main.m */; };
+		CAF765BC29E9501F00AC7325 /* MDCounter.m in Sources */ = {isa = PBXBuildFile; fileRef = CAF765BB29E9501F00AC7325 /* MDCounter.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,8 @@
 		CAF765AD29E9491800AC7325 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CAF765AF29E9491800AC7325 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CAF765B029E9491800AC7325 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		CAF765BA29E9501F00AC7325 /* MDCounter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MDCounter.h; sourceTree = "<group>"; };
+		CAF765BB29E9501F00AC7325 /* MDCounter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MDCounter.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +71,8 @@
 				CAF765A429E9491600AC7325 /* ViewController.h */,
 				CAF765A529E9491600AC7325 /* ViewController.m */,
 				CAF765A729E9491600AC7325 /* Main.storyboard */,
+				CAF765BA29E9501F00AC7325 /* MDCounter.h */,
+				CAF765BB29E9501F00AC7325 /* MDCounter.m */,
 				CAF765AA29E9491800AC7325 /* Assets.xcassets */,
 				CAF765AC29E9491800AC7325 /* LaunchScreen.storyboard */,
 				CAF765AF29E9491800AC7325 /* Info.plist */,
@@ -148,6 +153,7 @@
 			files = (
 				CAF765A629E9491600AC7325 /* ViewController.m in Sources */,
 				CAF765A029E9491600AC7325 /* AppDelegate.m in Sources */,
+				CAF765BC29E9501F00AC7325 /* MDCounter.m in Sources */,
 				CAF765B129E9491800AC7325 /* main.m in Sources */,
 				CAF765A329E9491600AC7325 /* SceneDelegate.m in Sources */,
 			);
