@@ -7,6 +7,7 @@
 
 #import "ViewController.h"
 #import "MDCounter.h"
+#import "SecondViewController.h"
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *counterLabel;
@@ -20,6 +21,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    self.title = @"First";
     
     self.counterLabel.text = @"-";
     self.counter = [[MDCounter alloc] init];
@@ -70,6 +73,14 @@
     
     // update the UI accordingly
     self.counterLabel.text = [NSString stringWithFormat:@"%d", self.counter.value];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if([segue.identifier isEqualToString:@"GoToSecondViewController"]) {
+        if([segue.destinationViewController isKindOfClass:[SecondViewController class]]) {
+            SecondViewController *svc = (SecondViewController *)segue.destinationViewController;
+            svc.data = [NSString stringWithFormat:@"Segue executed at %@", [NSDate date]];
+} }
 }
 
 @end

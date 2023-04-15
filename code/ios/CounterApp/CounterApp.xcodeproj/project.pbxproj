@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CAF5B9BC29EA8DBB003A8EA0 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAF5B9BB29EA8DBB003A8EA0 /* SecondViewController.m */; };
 		CAF765A029E9491600AC7325 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CAF7659F29E9491600AC7325 /* AppDelegate.m */; };
 		CAF765A329E9491600AC7325 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CAF765A229E9491600AC7325 /* SceneDelegate.m */; };
 		CAF765A629E9491600AC7325 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAF765A529E9491600AC7325 /* ViewController.m */; };
@@ -18,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CAF5B9BA29EA8DBB003A8EA0 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		CAF5B9BB29EA8DBB003A8EA0 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		CAF7659B29E9491600AC7325 /* CounterApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CounterApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAF7659E29E9491600AC7325 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CAF7659F29E9491600AC7325 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -71,6 +74,8 @@
 				CAF765A429E9491600AC7325 /* ViewController.h */,
 				CAF765A529E9491600AC7325 /* ViewController.m */,
 				CAF765A729E9491600AC7325 /* Main.storyboard */,
+				CAF5B9BA29EA8DBB003A8EA0 /* SecondViewController.h */,
+				CAF5B9BB29EA8DBB003A8EA0 /* SecondViewController.m */,
 				CAF765BA29E9501F00AC7325 /* MDCounter.h */,
 				CAF765BB29E9501F00AC7325 /* MDCounter.m */,
 				CAF765AA29E9491800AC7325 /* Assets.xcassets */,
@@ -151,6 +156,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CAF5B9BC29EA8DBB003A8EA0 /* SecondViewController.m in Sources */,
 				CAF765A629E9491600AC7325 /* ViewController.m in Sources */,
 				CAF765A029E9491600AC7325 /* AppDelegate.m in Sources */,
 				CAF765BC29E9501F00AC7325 /* MDCounter.m in Sources */,
