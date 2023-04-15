@@ -9,13 +9,20 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+// Costanti globali per le notifiche
+extern NSNotificationName const CounterChangedNotification;
+extern NSString *const CounterChangedNotificationNewValueKey;
+extern NSString *const CounterChangedNotificationOldValueKey;
+extern NSString *const CounterChangedNotificationChangedAtKey;
+
+
 @interface MDCounter : NSObject
 
 - (instancetype)init;
-- (instancetype)initWithValue:(NSNumber *)value;
+- (instancetype)initWithNumber:(NSNumber *)value;
+- (instancetype)initWithInt:(int)value;
 
-@property (strong, nonatomic) NSNumber *counter;
-@property (readonly) int asInt;
+@property (readonly) int value;
 - (void)increment;
 - (void)reset;
 

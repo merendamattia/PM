@@ -31,8 +31,8 @@
      In questo modo devo solo inviare la notifica direttamente dal metodo in MDCounter.m
      */
     [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(updateUI)
-                                                 name:@"CounterChanged"
+                                             selector:@selector(updateUI:)
+                                                 name:CounterChangedNotification
                                                object:self.counter];
     
 }
@@ -49,20 +49,27 @@
 
 - (IBAction)buttonResetCounter:(UIButton *)sender {
     NSLog(@"Counter reset!");
+    
     [self.counter reset];
     
     // self.counterLabel.text = [NSString stringWithFormat:@"%d", self.counter.asInt];
 }
 
-- (void)updateUI{
-    self.counterLabel.text = [NSString stringWithFormat:@"%d", self.counter.asInt];
+// this method is executed when a notification is received; the argument of the method is the notification (instance of NSNotification class)
+- (void)updateUI:(NSNotification*)notification{
+    
+    // the notification argument holds information about the notification that was reeceived
+    // property name -> name of the notification (in our case CounterChangedNotification)
+    // property userInfo -> NSDictionary of key/value pairs (the keys are defined as global constants in the MDCOunter class interface)
+    
+    NSLog(@"Received %@. Counter changed %@ -> %@",
+          notification.name,    // the name property of the notification (in our case CounterChangedNotification)
+          [notification.userInfo objectForKey:CounterChangedNotificationOldValueKey],
+          [notification.userInfo objectForKey:CounterChangedNotificationNewValueKey]
+          );
+    
+    // update the UI accordingly
+    self.counterLabel.text = [NSString stringWithFormat:@"%d", self.counter.value];
 }
-
-// Override metodo setCounter
-/*
-- (void)setCounter:(NSNumber *)counter{
-    _counter = @(_counter.intValue + 1);
-    self.counterLabel.text = [NSString stringWithFormat:@"%d", _counter.intValue];
-}*/
 
 @end
