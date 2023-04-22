@@ -22,7 +22,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.title = @"First";
+    self.title = @"Counter";
     
     self.counterLabel.text = @"-";
     self.counter = [[MDCounter alloc] init];
