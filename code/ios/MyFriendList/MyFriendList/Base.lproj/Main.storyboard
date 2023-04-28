@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -43,11 +44,43 @@
                             <outlet property="delegate" destination="nCT-PW-cag" id="6d9-ct-6SV"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="hEp-lA-jyh"/>
+                    <navigationItem key="navigationItem" id="hEp-lA-jyh">
+                        <barButtonItem key="rightBarButtonItem" title="Map" image="map" catalog="system" id="O1Y-vx-v6U">
+                            <connections>
+                                <segue destination="tpp-W9-eLB" kind="show" identifier="ShowMap" id="QU9-R7-xxq"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w4P-Eu-iuH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="780" y="23"/>
+            <point key="canvasLocation" x="939" y="-52"/>
+        </scene>
+        <!--Map View Controller-->
+        <scene sceneID="E8I-8q-Ge8">
+            <objects>
+                <viewController id="tpp-W9-eLB" customClass="MapViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SQf-hl-m7F">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="dYI-WN-2Cb">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </mapView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="VYo-m2-Krc"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="7iR-7T-kiF"/>
+                    <connections>
+                        <outlet property="mapView" destination="dYI-WN-2Cb" id="ZCk-lu-hyF"/>
+                        <segue destination="weQ-Db-0In" kind="presentation" identifier="ShowFriendFromMap" id="IXS-Cq-ZTl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mLv-Ze-f5x" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2493" y="-364"/>
         </scene>
         <!--Friend Table Detail Table View Controller-->
         <scene sceneID="3HR-PS-kGx">
@@ -57,10 +90,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <sections>
-                            <tableViewSection headerTitle="Anagrafica" id="olD-1k-kEw">
+                            <tableViewSection headerTitle="Avatar" id="uhw-FN-ga2">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="130" id="YNZ-Eg-Lzk">
+                                        <rect key="frame" x="20" y="49.5" width="374" height="130"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="YNZ-Eg-Lzk" id="NWx-3X-uAG">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="130"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nEh-ap-T6e">
+                                                    <rect key="frame" x="127" y="5" width="120" height="120"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Section-1" id="olD-1k-kEw">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="gdQ-SG-60J">
-                                        <rect key="frame" x="20" y="49.5" width="374" height="43.5"/>
+                                        <rect key="frame" x="20" y="229.5" width="374" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gdQ-SG-60J" id="Hyd-X7-KOr">
                                             <rect key="frame" x="0.0" y="0.0" width="374" height="43.5"/>
@@ -84,7 +135,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="dZc-lb-R1U">
-                                        <rect key="frame" x="20" y="93" width="374" height="43.5"/>
+                                        <rect key="frame" x="20" y="273" width="374" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dZc-lb-R1U" id="OAv-8S-Eh6">
                                             <rect key="frame" x="0.0" y="0.0" width="374" height="43.5"/>
@@ -109,10 +160,10 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="Contatti" id="xcz-mU-mYB">
+                            <tableViewSection headerTitle="Section-2" id="xcz-mU-mYB">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="McH-Ac-cg8">
-                                        <rect key="frame" x="20" y="186.5" width="374" height="43.5"/>
+                                        <rect key="frame" x="20" y="366.5" width="374" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="McH-Ac-cg8" id="F1r-Id-yNP">
                                             <rect key="frame" x="0.0" y="0.0" width="374" height="43.5"/>
@@ -145,6 +196,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="WDM-TQ-e5b"/>
                     <connections>
+                        <outlet property="avatarImageView" destination="nEh-ap-T6e" id="1Gw-qe-jfr"/>
                         <outlet property="emailLabel" destination="2QJ-TT-zqg" id="R6j-jg-F1P"/>
                         <outlet property="firstnameLabel" destination="zXG-TR-WsG" id="tiB-Ns-mwz"/>
                         <outlet property="lastnameLabel" destination="CVQ-JD-VJJ" id="fj1-XH-ScI"/>
@@ -152,7 +204,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q0Z-W9-56p" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1639" y="23"/>
+            <point key="canvasLocation" x="1720" y="666"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="6UY-4A-ATX">
@@ -173,7 +225,11 @@
             <point key="canvasLocation" x="70" y="24"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="dtu-B3-7qh"/>
+    </inferredMetricsTieBreakers>
     <resources>
+        <image name="map" catalog="system" width="128" height="110"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

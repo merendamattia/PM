@@ -8,6 +8,10 @@
 #import "FriendListTableViewController.h"
 #import "FriendList.h"
 #import "FriendTableDetailTableViewController.h"
+#import "GeoFriend.h"
+#import "MapViewController.h"
+
+#import "ExampleFriendDataSource.h"
 
 @interface FriendListTableViewController ()
 
@@ -19,22 +23,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
     self.title = @"I miei amici";
-    
-    self.friends = [[FriendList alloc] init];
-    
-    [self.friends add:[[Friend alloc] initWithFirstname:@"Beltran" lastname:@"Jendrich" email:@"bjendrich0@dmoz.org"]];
-    [self.friends add:[[Friend alloc] initWithFirstname:@"Yale" lastname:@"Hallifax" email:@"yhallifax1@nhs.uk"]];
-    [self.friends add:[[Friend alloc] initWithFirstname:@"Adda" lastname:@"Cowlas" email:@"acowlas2@nationalgeographic.com"]];
-    [self.friends add:[[Friend alloc] initWithFirstname:@"Rodina" lastname:@"Cornish" email:@"rcornish3@histats.com"]];
-    [self.friends add:[[Friend alloc] initWithFirstname:@"Bobbye" lastname:@"Dunkerley" email:@"bdunkerley4@hibu.com"]];
-    [self.friends add:[[Friend alloc] initWithFirstname:@"Kincaid" lastname:@"Dunican" email:@"kdunican5@globo.com"]];
-    [self.friends add:[[Friend alloc] initWithFirstname:@"Renae" lastname:@"Pedracci" email:@"rpedracci6@simplemachines.org"]];
-    [self.friends add:[[Friend alloc] initWithFirstname:@"Langston" lastname:@"McDonell" email:@"lmcdonell7@cam.ac.uk"]];
-    [self.friends add:[[Friend alloc] initWithFirstname:@"Noak" lastname:@"Cuppitt" email:@"ncuppitt8@ebay.com"]];
-    [self.friends add:[[Friend alloc] initWithFirstname:@"Prentice" lastname:@"Geddes" email:@"pgeddes9@wix.com"]];
-    
+    self.dataSource = [[ExampleFriendDataSource alloc] init];
+    if(self.dataSource != nil){
+        self.friends = [self.dataSource getFriends];
+    }
 }
 
 #pragma mark - Table view data source
@@ -65,6 +58,18 @@
             NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
             Friend *f = [self.friends getAtIndex:indexPath.row];
             vc.theFriend = f;
+        }
+    }
+    if([segue.identifier isEqualToString:@"ShowMap"]){
+        if([segue.destinationViewController isKindOfClass:[MapViewController class]]){
+            MapViewController *vc = (MapViewController *)segue.destinationViewController;
+            NSMutableArray *mArray = [[NSMutableArray alloc] init];
+            [[self.friends getAll] enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+                if([obj isKindOfClass:[GeoFriend class]]){
+                     [mArray addObject:obj];
+                }
+            }];
+            vc.friends = mArray;
         }
     }
 }

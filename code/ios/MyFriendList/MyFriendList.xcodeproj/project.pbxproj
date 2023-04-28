@@ -17,6 +17,11 @@
 		1D1A77F72632FCDE0023F5EA /* FriendList.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D1A77F62632FCDE0023F5EA /* FriendList.m */; };
 		1D1A77FE2632FF4B0023F5EA /* FriendListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D1A77FD2632FF4B0023F5EA /* FriendListTableViewController.m */; };
 		1D1A780626330BC40023F5EA /* FriendTableDetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D1A780526330BC40023F5EA /* FriendTableDetailTableViewController.m */; };
+		1DACF65D263C541000FA3C11 /* ExampleFriendDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DACF65C263C541000FA3C11 /* ExampleFriendDataSource.m */; };
+		1DB81BC9263C377C00B5CFD3 /* Poi.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DB81BC8263C377C00B5CFD3 /* Poi.m */; };
+		1DB81BCD263C38A900B5CFD3 /* GeoFriend.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DB81BCC263C38A900B5CFD3 /* GeoFriend.m */; };
+		1DB81BD1263C3AB800B5CFD3 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DB81BD0263C3AB800B5CFD3 /* MapViewController.m */; };
+		1DB81BD5263C431B00B5CFD3 /* GeoFriend+MapAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DB81BD4263C431B00B5CFD3 /* GeoFriend+MapAnnotation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +43,17 @@
 		1D1A77FD2632FF4B0023F5EA /* FriendListTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FriendListTableViewController.m; sourceTree = "<group>"; };
 		1D1A780426330BC40023F5EA /* FriendTableDetailTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FriendTableDetailTableViewController.h; sourceTree = "<group>"; };
 		1D1A780526330BC40023F5EA /* FriendTableDetailTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FriendTableDetailTableViewController.m; sourceTree = "<group>"; };
+		1DACF65B263C541000FA3C11 /* ExampleFriendDataSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExampleFriendDataSource.h; sourceTree = "<group>"; };
+		1DACF65C263C541000FA3C11 /* ExampleFriendDataSource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExampleFriendDataSource.m; sourceTree = "<group>"; };
+		1DB81BC7263C377C00B5CFD3 /* Poi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Poi.h; sourceTree = "<group>"; };
+		1DB81BC8263C377C00B5CFD3 /* Poi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Poi.m; sourceTree = "<group>"; };
+		1DB81BCB263C38A900B5CFD3 /* GeoFriend.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GeoFriend.h; sourceTree = "<group>"; };
+		1DB81BCC263C38A900B5CFD3 /* GeoFriend.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GeoFriend.m; sourceTree = "<group>"; };
+		1DB81BCF263C3AB800B5CFD3 /* MapViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		1DB81BD0263C3AB800B5CFD3 /* MapViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		1DB81BD3263C431B00B5CFD3 /* GeoFriend+MapAnnotation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GeoFriend+MapAnnotation.h"; sourceTree = "<group>"; };
+		1DB81BD4263C431B00B5CFD3 /* GeoFriend+MapAnnotation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "GeoFriend+MapAnnotation.m"; sourceTree = "<group>"; };
+		1DB81BD8263C535E00B5CFD3 /* FriendDataSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FriendDataSource.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +67,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1D0D313E263C8A31003BAF89 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1D1A780426330BC40023F5EA /* FriendTableDetailTableViewController.h */,
+				1D1A780526330BC40023F5EA /* FriendTableDetailTableViewController.m */,
+				1D1A77FC2632FF4B0023F5EA /* FriendListTableViewController.h */,
+				1D1A77FD2632FF4B0023F5EA /* FriendListTableViewController.m */,
+				1DB81BCF263C3AB800B5CFD3 /* MapViewController.h */,
+				1DB81BD0263C3AB800B5CFD3 /* MapViewController.m */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
 		1D1A77CB2632FAD50023F5EA = {
 			isa = PBXGroup;
 			children = (
@@ -75,10 +104,7 @@
 				1D1A77DA2632FAD50023F5EA /* SceneDelegate.h */,
 				1D1A77DB2632FAD50023F5EA /* SceneDelegate.m */,
 				1D1A77E02632FAD50023F5EA /* Main.storyboard */,
-				1D1A780426330BC40023F5EA /* FriendTableDetailTableViewController.h */,
-				1D1A780526330BC40023F5EA /* FriendTableDetailTableViewController.m */,
-				1D1A77FC2632FF4B0023F5EA /* FriendListTableViewController.h */,
-				1D1A77FD2632FF4B0023F5EA /* FriendListTableViewController.m */,
+				1D0D313E263C8A31003BAF89 /* View Controllers */,
 				1D1A77F92632FEBD0023F5EA /* Model */,
 				1D1A77E32632FAD60023F5EA /* Assets.xcassets */,
 				1D1A77E52632FAD60023F5EA /* LaunchScreen.storyboard */,
@@ -91,10 +117,19 @@
 		1D1A77F92632FEBD0023F5EA /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				1DB81BD8263C535E00B5CFD3 /* FriendDataSource.h */,
 				1D1A77F12632FB780023F5EA /* Friend.h */,
 				1D1A77F22632FB780023F5EA /* Friend.m */,
 				1D1A77F52632FCDE0023F5EA /* FriendList.h */,
 				1D1A77F62632FCDE0023F5EA /* FriendList.m */,
+				1DB81BC7263C377C00B5CFD3 /* Poi.h */,
+				1DB81BC8263C377C00B5CFD3 /* Poi.m */,
+				1DB81BCB263C38A900B5CFD3 /* GeoFriend.h */,
+				1DB81BCC263C38A900B5CFD3 /* GeoFriend.m */,
+				1DB81BD3263C431B00B5CFD3 /* GeoFriend+MapAnnotation.h */,
+				1DB81BD4263C431B00B5CFD3 /* GeoFriend+MapAnnotation.m */,
+				1DACF65B263C541000FA3C11 /* ExampleFriendDataSource.h */,
+				1DACF65C263C541000FA3C11 /* ExampleFriendDataSource.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -168,12 +203,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1DB81BC9263C377C00B5CFD3 /* Poi.m in Sources */,
 				1D1A77F32632FB780023F5EA /* Friend.m in Sources */,
 				1D1A77D92632FAD50023F5EA /* AppDelegate.m in Sources */,
+				1DACF65D263C541000FA3C11 /* ExampleFriendDataSource.m in Sources */,
+				1DB81BCD263C38A900B5CFD3 /* GeoFriend.m in Sources */,
 				1D1A780626330BC40023F5EA /* FriendTableDetailTableViewController.m in Sources */,
 				1D1A77EA2632FAD60023F5EA /* main.m in Sources */,
 				1D1A77DC2632FAD50023F5EA /* SceneDelegate.m in Sources */,
+				1DB81BD1263C3AB800B5CFD3 /* MapViewController.m in Sources */,
 				1D1A77F72632FCDE0023F5EA /* FriendList.m in Sources */,
+				1DB81BD5263C431B00B5CFD3 /* GeoFriend+MapAnnotation.m in Sources */,
 				1D1A77FE2632FF4B0023F5EA /* FriendListTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
