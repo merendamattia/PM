@@ -11,7 +11,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface MapViewController : UIViewController
 
-@property (nonatomic, strong) NSArray *friends;
+@property (nonatomic, strong) NSArray *friends; // Array contenente gli amici
 
 @end
 

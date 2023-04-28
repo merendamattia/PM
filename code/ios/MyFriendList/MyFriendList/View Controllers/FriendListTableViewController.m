@@ -9,7 +9,7 @@
 #import "FriendList.h"
 #import "FriendTableDetailTableViewController.h"
 #import "GeoFriend.h"
-#import "MapViewController.h"
+#import "MapViewController.h" 
 
 #import "ExampleFriendDataSource.h"
 
@@ -61,7 +61,7 @@
         }
     }
     if([segue.identifier isEqualToString:@"ShowMap"]){
-        if([segue.destinationViewController isKindOfClass:[MapViewController class]]){
+        if([segue.destinationViewController isKindOfClass:[MapViewController class]]){ // Devo importare MapViewController.h
             MapViewController *vc = (MapViewController *)segue.destinationViewController;
             NSMutableArray *mArray = [[NSMutableArray alloc] init];
             [[self.friends getAll] enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {

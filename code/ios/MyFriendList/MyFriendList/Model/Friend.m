@@ -9,6 +9,7 @@
 
 @implementation Friend
 
+// Inizializzatore che prende tutti i parametri
 - (instancetype)initWithFirstname:(NSString *)firstname
                          lastname:(NSString *)lastname
                             email:(NSString *)email
@@ -24,6 +25,11 @@
     return self;
 }
 
+// Inizializzatore che prende tutti i parametri tranne thumbnail (miniatura)
+// Posso fare thumbnail:nil perchè ho rimosso le "guardie" dal file interfaccia
+// NS_ASSUME_NONNULL_BEGIN ad inizio interfaccia
+// NS_ASSUME_NONNULL_END a fine interfaccia
+// Se utilizzo queste due "guardie" mi aspetto di non avere valori nulli
 - (instancetype)initWithFirstname:(NSString *)firstname
                          lastname:(NSString *)lastname
                             email:(NSString *)email
@@ -35,6 +41,8 @@
                          thumbnail:nil];
 }
 
+// Inizializzatore con solo nome, cognome ed email
+// Vale lo stesso discorso anche qui
 - (instancetype)initWithFirstname:(NSString *)firstname
                          lastname:(NSString *)lastname
                             email:(NSString *)email{
@@ -43,7 +51,7 @@
                              email:email
                             avatar:nil];
 }
-
+// Inizializzatore con solo nome e cognome
 - (instancetype)initWithFirstname:(NSString *)firstname
                          lastname:(NSString *)lastname{
     return [self initWithFirstname:firstname

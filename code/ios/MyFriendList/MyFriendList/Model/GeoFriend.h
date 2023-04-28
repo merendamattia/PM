@@ -11,6 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface GeoFriend : Friend
+// Estende la classe Friend ed include un oggetto Poi
 
 @property (nonatomic, strong) Poi *location;
 

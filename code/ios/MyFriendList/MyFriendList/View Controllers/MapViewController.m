@@ -6,7 +6,7 @@
 //
 
 #import "MapViewController.h"
-#import <MapKit/MapKit.h>
+#import <MapKit/MapKit.h> // Serve per le mappe
 #import "GeoFriend+MapAnnotation.h"
 #import "FriendTableDetailTableViewController.h"
 

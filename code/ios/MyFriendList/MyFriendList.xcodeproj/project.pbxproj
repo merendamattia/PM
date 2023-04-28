@@ -54,6 +54,7 @@
 		1DB81BD3263C431B00B5CFD3 /* GeoFriend+MapAnnotation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GeoFriend+MapAnnotation.h"; sourceTree = "<group>"; };
 		1DB81BD4263C431B00B5CFD3 /* GeoFriend+MapAnnotation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "GeoFriend+MapAnnotation.m"; sourceTree = "<group>"; };
 		1DB81BD8263C535E00B5CFD3 /* FriendDataSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FriendDataSource.h; sourceTree = "<group>"; };
+		CACFD6CC29FC192700D5B28C /* MyFriendList.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MyFriendList.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +100,7 @@
 		1D1A77D62632FAD50023F5EA /* MyFriendList */ = {
 			isa = PBXGroup;
 			children = (
+				CACFD6CC29FC192700D5B28C /* MyFriendList.entitlements */,
 				1D1A77D72632FAD50023F5EA /* AppDelegate.h */,
 				1D1A77D82632FAD50023F5EA /* AppDelegate.m */,
 				1D1A77DA2632FAD50023F5EA /* SceneDelegate.h */,
@@ -357,9 +359,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = MyFriendList/MyFriendList.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_ASSET_PATHS = MyFriendList;
+				DEVELOPMENT_TEAM = 6VHHPXH35W;
 				INFOPLIST_FILE = MyFriendList/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -375,9 +380,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = MyFriendList/MyFriendList.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_ASSET_PATHS = MyFriendList;
+				DEVELOPMENT_TEAM = 6VHHPXH35W;
 				INFOPLIST_FILE = MyFriendList/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
